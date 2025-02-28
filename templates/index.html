@@ -33,8 +33,8 @@
     <!-- Place your kit's code here -->
     <script src="https://kit.fontawesome.com/f453a6026d.js" crossorigin="anonymous"></script>
 
-
-
+    <!-- AOS CSS (Include in <head>) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 
 </head>
@@ -44,6 +44,7 @@
         <button id="menu-toggle" class="menu-toggle">
             <i class="fa-solid fa-bars"></i>
         </button>
+
 
 
         <!-- Modal -->
@@ -263,24 +264,25 @@
             <section id="home">
 
                 <div class="hero-text">
-                    <h1>Tejas Tikkas</h1>
-                    <h4>I'm <span class="typing"
+                    <h1 data-aos="fade-left" data-aos-delay="100">Tejas Tikkas</h1>
+                    <h4 data-aos="fade-left" data-aos-delay="200">I'm <span class="typing"
                             style="font-family: Fira Code ;font-weight: 500; color: rgb(149, 175, 247);"></span></h4>
 
                 </div>
 
 
 
-                <div class="hero-image-container">
+                <div class="hero-image-container" data-aos="fade-up" data-aos-delay="300">
                     <img src="{{ url_for('static', filename='images/hero_image.png') }}" alt="Hero Image"
-                        class="img-fluid animation-new">
+                        class="img-fluid ">
                 </div>
             </section>
 
 
             <section id="about">
                 <h2>About</h2>
-                <h4>Hi, I'm <span class="highlighted-tejas">Tejas Tikkas!</span></h4>
+                <h4 data-aos="fade-right" data-aos-delay="50">Hi, I'm <span class="highlighted-tejas">Tejas
+                        Tikkas!</span></h4>
 
                 <p>
                     Passionate Python & AI/ML Developer skilled in building scalable, AI-driven solutions. Experienced
@@ -291,10 +293,11 @@
                 <div class="about-info">
 
                     <img src="{{ url_for('static', filename='images/about.png') }}"
-                        class="img-fluid rounded about-info-img animation-new" alt="Tejas_Image">
+                        class="img-fluid rounded about-info-img" data-aos="fade-left" data-aos-delay="100"
+                        alt="Tejas_Image">
 
                     <div class="about-details">
-                        <div class="column">
+                        <div class="column" data-aos="fade-up" data-aos-delay="100">
                             <div class="rows">
                                 <h6><strong>Name : </strong></h6>
                                 <h6 class="table-data">Tejas Dilip Tikkas</h6>
@@ -312,8 +315,8 @@
                                 <h6 class="table-data">B.Tech in CSE (Pursuing)</h6>
                             </div>
                         </div>
-                        <div class="column-seperator"></div>
-                        <div class="column">
+                        <div class="column-seperator" data-aos="fade-left" data-aos-delay="100"></div>
+                        <div class="column" data-aos="fade-left" data-aos-delay="100">
                             <div class="rows">
                                 <h6><strong>Phone : </strong></h6>
                                 <h6 class="table-data">7821964097</h6>
@@ -341,7 +344,7 @@
             <section id="education">
                 <h1>Education</h1>
                 <div class="edu-info">
-                    <div class="edu-content">
+                    <div class="edu-content" data-aos="slide-right" data-aos-delay="100">
                         <img class="edu-icons" src="{{ url_for('static', filename='icons/school.svg') }}"
                             alt="school Icon">
                         <h5>Passed SSC</h5>
@@ -349,7 +352,7 @@
                         <h6> 2021</h6>
                     </div>
 
-                    <div class="edu-content">
+                    <div class="edu-content" data-aos="slide-left" data-aos-delay="100">
                         <img class="edu-icons" src="{{ url_for('static', filename='icons/diploma.svg') }}"
                             alt="school Icon">
                         <h5>Diploma in CSE</h5>
@@ -357,7 +360,7 @@
                         <h6>2021-2024</h6>
                     </div>
 
-                    <div class="edu-content">
+                    <div class="edu-content" data-aos="slide-right" data-aos-delay="100">
 
                         <img class="edu-icons" src="{{ url_for('static', filename='icons/college.svg') }}"
                             alt="school Icon">
@@ -415,11 +418,11 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="lower-skills-container">
 
-                    <div class="soft-skills-icons">
+                    <div class="soft-skills-icons" data-aos="zoom-in-up" data-aos-delay="100">
                         <h2>Soft Skills</h2>
 
                         <div class="soft-skill">
@@ -454,7 +457,7 @@
                     </div>
 
                     <div class="skill-seperator"></div>
-                    <div class="tools-container">
+                    <div class="tools-container" data-aos="slide-left" data-aos-delay="100">
                         <h2>Tools & Technologies</h2>
                         <div class="outer-tool-container">
                             <div class="image-text-column">
@@ -493,7 +496,7 @@
                 <h2>Projects</h2>
                 <div class="projects-container">
                     <!-- Project 1 -->
-                    <div class="project-card">
+                    <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
                         <img src="{{ url_for('static', filename='images/yt-download.png') }}" alt="Project 1">
                         <h4>YT Video & Music <br>Downloader</h4>
                         <p>Download YouTube videos and music effortlessly with a single click.</p>
@@ -506,7 +509,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card"   data-aos="zoom-in-right" data-aos-delay="100">
                         <img src="{{ url_for('static', filename='images/stock.png') }}" alt="Project 1">
                         <h4>Stock Market <br> Screener </h4>
                         <p>AI-powered stock market screener with real-time data and analysis.</p>
@@ -517,7 +520,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-aos="zoom-in-left" data-aos-delay="100">
                         <img src="{{ url_for('static', filename='images/music-player.png') }}" alt="Project 1">
                         <h4>Music Player</h4>
                         <p>A sleek and interactive music player with a user-friendly interface.</p>
@@ -530,7 +533,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
                         <img style="margin: 4rem auto;" src="{{ url_for('static', filename='images/echospeak.png') }}"
                             alt="Project 1">
                         <h4>EchoSpeak</h4>
@@ -555,12 +558,12 @@
                 </p>
 
                 <!-- Resume Preview (Optional) -->
-                <div class="resume-preview">
+                <div class="resume-preview" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
                     <img src="{{ url_for('static', filename='images/Tejas_Tikkas_Resume.jpg') }}" alt="Resume Preview">
                 </div>
 
                 <!-- Download Resume Button -->
-                <div class="resume-download">
+                <div class="resume-download" data-aos="zoom-in-up" data-aos-duration="500">
                     <a href="{{ url_for('static', filename='resume/Tejas_Tikkas_Resume.pdf') }}" download>
                         <button class="download-btn"><i class="fa-solid fa-download"></i> Download Resume</button>
                     </a>
@@ -576,7 +579,7 @@
                     </p>
                 </div>
 
-                <div class="contact-form">
+                <div class="contact-form" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
                     <form id="contactForm" autocomplete="off">
                         <div class="input-group">
                             <label for="name">Name</label>
@@ -629,6 +632,13 @@
     </script>
 
 
+    <!-- AOS JS (Include before </body>) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true // Ensures animations trigger only once per page load
+        });
+    </script>
 
 </body>
 
