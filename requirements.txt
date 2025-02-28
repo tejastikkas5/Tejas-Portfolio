@@ -1,0 +1,4 @@
+Flask==3.0.2
+Flask-Mail==0.9.1
+python-dotenv==1.0.1
+waitress==3.0.0

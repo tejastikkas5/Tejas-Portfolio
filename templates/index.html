@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas Tikkas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='media.css') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/f453a6026d.js" crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <main>
+        <button id="menu-toggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <!-- Modal -->
+
+        <!-- Custom Modal -->
+        <div id="ytDownloadModal" class="custom-modal">
+            <div class="modal-contented">
+                <span class="close-btn" onclick="closeModal('ytDownloadModal')">&times;</span>
+                <h4>YT Download & Converter</h4>
+                <div class="modal-img-container">
+                    <img src="{{ url_for('static', filename='images/yt-download.png') }}"
+                        alt="YouTube Video Downloader and MP3 Converter Icon">
+                </div>
+
+                <p>A powerful tool to download and convert YouTube videos easily.</p>
+
+                <h5>✨ Features:</h5>
+                <ul>
+                    <li>🎥 Download YouTube videos in high quality</li>
+                    <li>🎵 Convert videos to MP3 for offline music</li>
+                    <li>⚡ Fast and lightweight tool</li>
+                    <li>📂 Supports MP4, MP3</li>
+                    <li>🔗 Simple and easy-to-use interface</li>
+                </ul>
+
+                <h5>🚀 How to Use:</h5>
+                <ol>
+                    <li>Select the desired format (MP4, MP3, )</li>
+                    <li>Paste the YouTube video link</li>
+                    <li>Click the "Download" button</li>
+                    <li>Enjoy offline videos and music!</li>
+                </ol>
+
+                <h5>🛠️ Technologies Used:</h5>
+                <p><strong>Python</strong> | <strong>TKinter </strong> | <strong>Custom TKinter</strong> |
+                    <strong>PyTube</strong>
+                </p>
+
+            </div>
+        </div>
+
+        <div id="stockMarketModal" class="custom-modal">
+            <div class="modal-contented">
+                <span class="close-btn" onclick="closeModal('stockMarketModal')">&times;</span>
+                <h4>Stock Market Screener</h4>
+                <div class="modal-img-container">
+                    <img src="{{ url_for('static', filename='images/stock.png') }}" alt="Stock Market Icon">
+                </div>
+
+                <p>An AI-powered stock market screener with real-time data and analysis.</p>
+
+                <h5>✨ Features:</h5>
+                <ul>
+                    <li>📊 Live stock price tracking and trend analysis</li>
+                    <li>🤖 AI-based sentiment analysis of stock-related news</li>
+                    <li>📈 Interactive charts for market visualization</li>
+                    <li>💬 Built-in chatbot for stock recommendations</li>
+                    <li>⚡ Fast and efficient stock filtering</li>
+                </ul>
+
+                <h5>🚀 How to Use:</h5>
+                <ol>
+                    <li>Enter the stock symbol or company name</li>
+                    <li>View real-time stock prices and trends</li>
+                    <li>Analyze AI-generated insights on market sentiment</li>
+                    <li>Use the chatbot for personalized stock suggestions</li>
+                </ol>
+
+                <h5>🛠️ Technologies Used:</h5>
+                <p><strong>Python</strong> | <strong>Streamlit</strong> | <strong>Machine Learning</strong> |
+                    <strong>Matplotlib</strong> | <strong>Plotly</strong> | <strong>yFinance API</strong>
+                </p>
+
+            </div>
+        </div>
+
+        <div id="musicPlayerModal" class="custom-modal">
+            <div class="modal-contented">
+                <span class="close-btn" onclick="closeModal('musicPlayerModal')">&times;</span>
+                <h4>Music Player</h4>
+                <div class="modal-img-container">
+                    <img src="{{ url_for('static', filename='images/music-player.png') }}" alt="Music Player Icon">
+                </div>
+
+                <p>A sleek and interactive music player built with Python and Tkinter.</p>
+
+                <h5>✨ Features:</h5>
+                <ul>
+                    <li>🎵 Play, pause, and rewind songs effortlessly</li>
+                    <li>📂 Select songs from any local folder</li>
+                    <li>🔊 Adjustable volume and real-time song progress bar</li>
+                    <li>🎨 Modern UI with CustomTkinter</li>
+                    <li>⚡ Fast and lightweight</li>
+                </ul>
+
+                <h5>🚀 How to Use:</h5>
+                <ol>
+                    <li>Launch the music player</li>
+                    <li>Select a folder containing audio files</li>
+                    <li>Click on a song to start playing</li>
+                    <li>Use play, pause, and rewind buttons to control playback</li>
+                </ol>
+
+                <h5>🛠️ Technologies Used:</h5>
+                <p><strong>Python</strong> | <strong>TKinter</strong> | <strong>CustomTkinter</strong> |
+                    <strong>Pygame</strong> | <strong>Mutagen</strong>
+                </p>
+
+            </div>
+        </div>
+
+        <div id="echoSpeakModal" class="custom-modal">
+            <div class="modal-contented">
+                <span class="close-btn" onclick="closeModal('echoSpeakModal')">&times;</span>
+                <h4>EchoSpeak</h4>
+                <div class="modal-img-container">
+                    <img src="{{ url_for('static', filename='images/echospeak.png') }}" alt="EchoSpeak Icon">
+                </div>
+
+                <p>A Hindi Text-to-Speech (TTS) converter that generates natural and clear voice output.</p>
+
+                <h5>✨ Features:</h5>
+                <ul>
+                    <li>🗣️ Converts Hindi text into natural speech</li>
+                    <li>🎙️ Uses ElevenLabs AI-based voice synthesis</li>
+                    <li>📂 Downloadable MP3 output</li>
+                    <li>⚡ Fast and accurate voice generation</li>
+                    <li>🌎 Multilingual model support</li>
+                </ul>
+
+                <h5>🚀 How to Use:</h5>
+                <ol>
+                    <li>Enter or paste Hindi text into the input field</li>
+                    <li>Click the "Convert" button</li>
+                    <li>The system will generate speech using ElevenLabs</li>
+                    <li>Download the generated audio file (MP3 format)</li>
+                </ol>
+
+                <h5>🛠️ Technologies Used:</h5>
+                <p><strong>Python</strong> | <strong>Flask</strong> | <strong>ElevenLabs API</strong> |
+                    <strong>HTML/CSS</strong> | <strong>JavaScript</strong>
+                </p>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="side-menu">
+            <div class="profile-img">
+                <img src="{{ url_for('static', filename='images/2.png') }}" alt="Profile Image"
+                    class="img-fluid rounded-circle">
+            </div>
+            <h4 style="font-family: Raleway; font-weight: 700; margin-top: 1rem; "> Tejas Tikkas</h4>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/tejastikkas" target="_blank" class="icon-container">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/tejastikkas5" target="_blank" class="icon-container">
+                    <i class="fab fa-github" style="font-size: 20px;"></i>
+                </a>
+                <a href="https://www.instagram.com/skimeteju/" target="_blank" class="icon-container">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@BeetleCoding" target="_blank" class="icon-container">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+            <div class="navigation-bar">
+                <a href="#home">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+                <a href="#about">
+                    <i class="fa-solid fa-user"></i>
+                    About Me
+                </a>
+                <a href="#education">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Education
+                </a>
+                <a href="#skills-section">
+                    <i class="fas fa-code"></i>
+                    Skills
+                </a>
+                <a href="#project">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Projects
+                </a>
+                <a href="#resume">
+                    <i class="fas fa-file"></i>
+                    Resume
+                </a>
+                <a href="#contact">
+                    <i class="fas fa-address-book"></i>
+                    Contact Me
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="main-content">
+            <section id="home">
+
+                <div class="hero-text">
+                    <h1>Tejas Tikkas</h1>
+                    <h4>I'm <span class="typing"
+                            style="font-family: Fira Code ;font-weight: 500; color: rgb(149, 175, 247);"></span></h4>
+
+                </div>
+
+
+
+                <div class="hero-image-container">
+                    <img src="{{ url_for('static', filename='images/hero_image.png') }}" alt="Hero Image"
+                        class="img-fluid animation-new">
+                </div>
+            </section>
+
+
+            <section id="about">
+                <h2>About</h2>
+                <h4>Hi, I'm <span class="highlighted-tejas">Tejas Tikkas!</span></h4>
+
+                <p>
+                    Passionate Python & AI/ML Developer skilled in building scalable, AI-driven solutions. Experienced
+                    in machine learning, Python, and projects like a Stock Market Screener with AI-based sentiment
+                    analysis. Beyond coding, I enjoy playing guitar and badminton . Always eager to innovate and
+                    collaborate!</ps>
+
+                <div class="about-info">
+
+                    <img src="{{ url_for('static', filename='images/about.png') }}"
+                        class="img-fluid rounded about-info-img animation-new" alt="Tejas_Image">
+
+                    <div class="about-details">
+                        <div class="column">
+                            <div class="rows">
+                                <h6><strong>Name : </strong></h6>
+                                <h6 class="table-data">Tejas Dilip Tikkas</h6>
+                            </div>
+                            <div class="rows">
+                                <h6><strong>Age : </strong></h6>
+                                <h6 class="table-data">19</h6>
+                            </div>
+                            <div class="rows">
+                                <h6><strong>Occupation : </strong></h6>
+                                <h6 class="table-data">Student</h6>
+                            </div>
+                            <div class="rows">
+                                <h6><strong>Degree :</strong></h6>
+                                <h6 class="table-data">B.Tech in CSE (Pursuing)</h6>
+                            </div>
+                        </div>
+                        <div class="column-seperator"></div>
+                        <div class="column">
+                            <div class="rows">
+                                <h6><strong>Phone : </strong></h6>
+                                <h6 class="table-data">7821964097</h6>
+                            </div>
+                            <div class="rows">
+                                <h6><strong>Email : </strong></h6>
+                                <h6 class="table-data">tejastikkas2545@gmail.com</h6>
+                            </div>
+                            <div class="rows">
+                                <h6><strong>Nationality : </strong></h6>
+                                <h6 class="table-data">Indian</h6>
+                            </div>
+                            <div class="rows">
+                                <h6><strong>Hobbies :</strong></h6>
+                                <h6 class="table-data">Guitar, Badminton</h6>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section id="education">
+                <h1>Education</h1>
+                <div class="edu-info">
+                    <div class="edu-content">
+                        <img class="edu-icons" src="{{ url_for('static', filename='icons/school.svg') }}"
+                            alt="school Icon">
+                        <h5>Passed SSC</h5>
+                        <h6>Krishak English Vidyalaya, Arvi</h6>
+                        <h6> 2021</h6>
+                    </div>
+
+                    <div class="edu-content">
+                        <img class="edu-icons" src="{{ url_for('static', filename='icons/diploma.svg') }}"
+                            alt="school Icon">
+                        <h5>Diploma in CSE</h5>
+                        <h6>Government Polytechnic Arvi</h6>
+                        <h6>2021-2024</h6>
+                    </div>
+
+                    <div class="edu-content">
+
+                        <img class="edu-icons" src="{{ url_for('static', filename='icons/college.svg') }}"
+                            alt="school Icon">
+                        <h5>B.Tech in CSE</h5>
+                        <h6>MITCORER, Barshi</h6>
+                        <h6>2024-2027</h6>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="skills-section">
+                <h2>Technical Skills</h2>
+
+                <div class="skills-container">
+                    <div class="skill">
+                        <p><i class="fa-brands fa-python language-icons"></i>Python</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-skill="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><i class="fa-solid fa-robot language-icons"></i>Machine Learning</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-skill="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><i class="fa-brands fa-js language-icons"></i>JavaScript</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-skill="30"></div>
+                            <p>75%</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><i class="fa-solid fa-database language-icons"></i></i>SQL</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-skill="70"></div>
+                            <p>75%</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><img style="height: 1rem; width: 1rem; margin-right: 1rem;"
+                                src="{{ url_for('static', filename='icons/powerbi.png') }}" alt="Power bi icon">Power BI
+                        </p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-skill="50"></div>
+                            <p>75%</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="lower-skills-container">
+
+                    <div class="soft-skills-icons">
+                        <h2>Soft Skills</h2>
+
+                        <div class="soft-skill">
+                            <i class="fas fa-lightbulb "></i>
+                            <span class="skill-text">Problem-Solving</span>
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fas fa-users"></i>
+                            <span class="skill-text">Teamwork</span>
+                            <span class="rating">⭐⭐⭐⭐</span>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fas fa-comments"></i>
+                            <span class="skill-text">Communication</span>
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fas fa-user-tie"></i>
+                            <span class="skill-text">Leadership</span>
+                            <span class="rating">⭐⭐⭐⭐</span>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fas fa-clock"></i>
+                            <span class="skill-text">Time Management</span>
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-seperator"></div>
+                    <div class="tools-container">
+                        <h2>Tools & Technologies</h2>
+                        <div class="outer-tool-container">
+                            <div class="image-text-column">
+                                <img src="{{ url_for('static', filename='icons/vscode.png') }}" alt="VS Code Image">
+                                <p>VS Code</p>
+                            </div>
+                            <div class="image-text-column">
+                                <img src="{{ url_for('static', filename='icons/github.png') }}" alt="Github Image">
+                                <p>Github</p>
+                            </div>
+                            <div class="image-text-column">
+                                <img src="{{ url_for('static', filename='icons/jupyter.png') }}" alt="Jupyter Image">
+                                <p>Jupyter Notebook</p>
+                            </div>
+                        </div>
+                        <div class="outer-tool-container">
+                            <div class="image-text-column">
+                                <img src="{{ url_for('static', filename='icons/git.png') }}" alt="Git Image">
+                                <p>Git</p>
+                            </div>
+                            <div class="image-text-column">
+                                <img class="colab-icon" src="{{ url_for('static', filename='icons/google-colab.svg') }}"
+                                    alt="Google Colab Image">
+                                <p>Google Colab</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </section>
+
+            <section id="project">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="{{ url_for('static', filename='images/yt-download.png') }}" alt="Project 1">
+                        <h4>YT Video & Music <br>Downloader</h4>
+                        <p>Download YouTube videos and music effortlessly with a single click.</p>
+                        <div class="project-links">
+
+                            <a href="https://github.com/tejastikkas5/YT-Downloader" target="_blank"><button
+                                    type="submit" class="outline">Github</button></a>
+
+                            <button type="submit" class="outline" onclick="openModal('ytDownloadModal')">View </button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="{{ url_for('static', filename='images/stock.png') }}" alt="Project 1">
+                        <h4>Stock Market <br> Screener </h4>
+                        <p>AI-powered stock market screener with real-time data and analysis.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/tejastikkas5/Stock-Market-Screener" target="_blank"><button
+                                    type="submit" class="outline">Github</button></a>
+                            <button type="submit" class="outline" onclick="openModal('stockMarketModal')">View </button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="{{ url_for('static', filename='images/music-player.png') }}" alt="Project 1">
+                        <h4>Music Player</h4>
+                        <p>A sleek and interactive music player with a user-friendly interface.</p>
+                        <br>
+                        <div class="project-links">
+                            <a href="https://github.com/tejastikkas5/Music-Player" target="_blank"><button type="submit"
+                                    class="outline">Github</button></a>
+                            <button type="submit" class="outline" onclick="openModal('musicPlayerModal')">View </button>
+
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img style="margin: 4rem auto;" src="{{ url_for('static', filename='images/echospeak.png') }}"
+                            alt="Project 1">
+                        <h4>EchoSpeak</h4>
+                        <p>A Hindi text-to-speech (TTS) converter for natural and clear voice output.</p>
+                        <br>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><button type="submit" style="width: auto; " class="outline"
+                                    disabled>coming</button></a>
+                            <button type="submit" class="outline" onclick="openModal('echoSpeakModal')">View </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="resume">
+                <h2>My Resume</h2>
+                <p class="resume-description">
+                    Here’s a detailed look at my education, skills, and professional experience. Download my resume to
+                    learn more!
+                </p>
+
+                <!-- Resume Preview (Optional) -->
+                <div class="resume-preview">
+                    <img src="{{ url_for('static', filename='images/Tejas_Tikkas_Resume.jpg') }}" alt="Resume Preview">
+                </div>
+
+                <!-- Download Resume Button -->
+                <div class="resume-download">
+                    <a href="{{ url_for('static', filename='resume/Tejas_Tikkas_Resume.pdf') }}" download>
+                        <button class="download-btn"><i class="fa-solid fa-download"></i> Download Resume</button>
+                    </a>
+                </div>
+            </section>
+
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <div class="contact-para">
+                    <p class="contact-description">Have a question or want to collaborate? Feel free to send me a
+                        message!
+                    </p>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm" autocomplete="off">
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name"
+                                autocomplete="off">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email"
+                                autocomplete="off">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="8" required
+                                placeholder="Write your message here" autocomplete="off"></textarea>
+                        </div>
+
+                        <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i> Send
+                            Message</button>
+                    </form>
+                </div>
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".typing", {
+            strings: ["Developer", "Freelancer", "Coder"],
+            typeSpeed: 100,
+            backSpeed: 70,
+            loop: true
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,683 @@
+
+
+@media only screen and (min-width: 1025px) {
+    .modal-contented {
+        width: 60rem; /* Increase width for larger screens */
+        max-width: 80%;
+        padding: 2.5rem; /* More padding for better spacing */
+        margin-left: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .side-menu {
+        width: 16rem;
+    }
+
+    .navigation-bar {
+        margin-top: 1rem;
+
+    }
+
+    .navigation-bar a {
+        gap: 1rem;
+        padding: 1.1rem 1.2rem;
+    }
+
+
+
+    /* !------------ Home Section ------------! */
+
+    .hero-text {
+        padding-left: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        white-space: nowrap;
+
+    }
+
+
+
+
+    /* !------------ About Section ------------! */
+
+    #about {
+        width: 100;
+        height: auto;
+    }
+
+    #about h4 {
+        margin-top: 1.8rem;
+    }
+
+    .about-info-img {
+        width: 40%;
+        height: auto;
+    }
+
+    .about-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rows {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 1.8rem;
+        align-items: flex-start;
+    }
+
+
+    /* !------------ Education Section ------------! */
+
+    .edu-info {
+        gap: 2.2rem;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .edu-icons {
+        width: 10rem;
+        height: 10rem;
+        padding: 2rem;
+
+    }
+
+    .edu-content h5 {
+        font-size: 1.1rem;
+    }
+
+    .edu-content h6 {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+
+    /* !------------ Skills Section ------------! */
+
+
+    .skills-container {
+        /* border: 2px solid green;  */
+        width: 80%;
+        margin-top: 1rem;
+    }
+
+    .lower-skills-container {
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .soft-skills-icons {
+        text-align: left;
+        color: white;
+        width: 100%;
+        height: 100%;
+        margin-right: 2rem;
+        border: none;
+    }
+
+    .soft-skill {
+        justify-content: space-between;
+        font-size: 0.97rem;
+        margin-right: 0;
+        gap: 1rem;
+    }
+
+    .skill-seperator {
+        display: block;
+        border: 1px solid cyan;
+        height: 95%;
+
+    }
+
+    .tools-container {
+        padding-left: 1rem;
+    }
+
+    .tools-container h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .outer-tool-container {
+        gap: 1.4rem;
+    }
+
+    .image-text-column img {
+        width: 4rem;
+    }
+
+
+    /* !------------ Project Section ------------! */
+
+
+    .modal-contented {
+        width: 80%;
+        max-width: 40rem;
+        /* Prevents too large modals */
+        margin: 0 auto;
+        /* Centers modal */
+        margin-left: 20rem;
+        height: 80vh;
+        overflow-y: auto;
+    }
+
+
+    /* !------------ Contact Section ------------! */
+    #contact h2 {
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+        background: #1e242c;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    }
+
+}
+
+@media only screen and (max-width: 951px) {
+
+
+    /* !------------ Home Section ------------! */
+
+    #home {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+
+    }
+
+    /* !------------ About Section ------------! */
+    .about-info-img {
+        width: 40%;
+    }
+
+    /* !------------ Education Section ------------! */
+
+
+    #education {
+        padding: 0;
+    }
+
+    #education h1 {
+        padding-top: 2rem;
+    }
+
+    .edu-info {
+        gap: 1rem;
+        justify-content: space-around;
+
+    }
+
+    .edu-content h6 {
+        font-size: 0.8rem;
+    }
+
+    
+
+
+}
+
+@media only screen and (max-width: 980px) {
+    .modal-contented {
+        width: 80%; 
+        max-width: 35rem; /* Slightly smaller than 1024px */
+        padding: 1.8rem; /* Adjust padding for better spacing */
+        margin: 0 auto; 
+        margin-left: 20rem;/* Centers the modal */
+    }
+}
+
+
+
+@media only screen and (max-width: 891px) {
+    .modal-contented {
+        width: 80%; 
+        max-width: 33rem; /* Slightly smaller than 1024px */
+        padding: 1.8rem; /* Adjust padding for better spacing */
+        margin: 0 auto; 
+        margin-left: 19rem;
+    }
+}
+
+@media only screen and (max-width: 841px) {
+    .modal-contented {
+        width: 80%; 
+        max-width: 30rem; /* Slightly smaller than 1024px */
+        padding: 1.5rem; /* Adjust padding for better spacing */
+        margin: 0 auto; 
+        margin-left: 17.5rem;
+    }
+}
+
+
+/* Hide menu on small screens */
+@media only screen and (max-width: 768px) {
+
+    .side-menu {
+        left: -18rem;
+        /* Hide on mobile by default */
+    }
+
+    .side-menu.active {
+        left: 0;
+        /* Show when toggled */
+    }
+
+    /* Show the menu button only on small screens */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        top: 1rem;
+        right: 1rem;
+        background-color: #149ddd;
+        border: none;
+        font-size: 2rem;
+        color: rgb(0, 0, 0);
+        border-radius: 50%;
+        padding: 0.1rem;
+        z-index: 1100;
+        cursor: pointer;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #education h1 {
+        margin: 2rem;
+    }
+
+
+
+    .modal-contented {
+        margin: 1.5rem;
+
+        width: 90%;
+        max-width: 35rem;
+        padding: 1.5rem;
+    }
+
+
+
+}
+
+/* Hide the menu button on large screens */
+@media only screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width: 431px) { */
+@media only screen and (max-width: 500px) {
+    #home {
+        flex-direction: column;
+        gap: 0rem;
+        height: 100vh;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .hero-text {
+        padding: 3rem 0.5rem;
+        margin: 0.5rem;
+        height: auto;
+    }
+
+
+
+    .hero-text h1 {
+        font-size: 2.7rem !important;
+
+    }
+
+    .hero-image-container {
+        width: 100%;
+        height: auto;
+        padding: 0 !important;
+        margin: 0 !important;
+
+    }
+
+    .hero-image-container img {
+        margin: 0;
+        padding: 0;
+        width: 80%;
+        height: auto;
+    }
+
+    /*******************! About Section ************************/
+
+    #about p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    .about-info {
+        flex-direction: column;
+    }
+
+    .about-info-img {
+        width: 50%;
+        height: auto;
+    }
+
+    .about-details {
+        flex-direction: column;
+    }
+
+    .column-seperator {
+        display: none;
+    }
+
+    .rows {
+        width: max-content;
+        padding: 1rem;
+    }
+
+    .column {
+        align-items: flex-start;
+
+    }
+
+
+
+
+
+    /*******************! Education Section ************************/
+
+    .edu-info {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+
+
+    }
+
+
+    /*******************! Skill Section ************************/
+
+
+    .skills-container {
+        width: 100%;
+        margin-top: 2rem auto;
+    }
+
+    .skill-seperator {
+        display: none;
+    }
+
+    .lower-skills-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 3rem;
+
+    }
+
+    .soft-skills-icons {
+        text-align: left;
+        color: white;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .soft-skill {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+        /* margin-left: 1rem; */
+    }
+
+    .tools-container h2 {
+        margin-bottom: 2rem;
+
+    }
+
+
+
+
+    /*******************! Project Section ************************/
+
+
+
+    .modal-contented {
+        width: 95%;
+        margin: 1.5rem;
+        max-width: 30rem;
+        padding: 1rem;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem 1rem;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+    /*******************! Resume Section ************************/
+
+
+    #resume {
+        background-color: #02060A;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        height: auto;
+    }
+
+
+    .resume-description {
+
+        font-size: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+        color: #d3d3d3;
+    }
+
+    .resume-preview {
+        margin: 1rem auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .resume-preview img {
+        width: 80%;
+    }
+
+    .resume-download {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+
+    /*******************! Contact Section ************************/
+
+    .contact-para {
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 1.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+    /*******************! About Section ************************/
+
+    #about p {
+        font-size: 0.8rem;
+        word-spacing: 0.1rem;
+
+    }
+
+    .about-info-img {
+        width: 80%;
+    }
+
+
+    /*******************! Skills Section ************************/
+
+    .soft-skill {
+        font-size: 1rem !important;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    /*******************! Project Section ************************/
+
+
+    #project {
+        padding: 1rem;
+    }
+
+    #project h2 {
+        margin-top: 2rem;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .project-card {
+        width: 90%;
+        padding: 1;
+        margin: 0;
+    }
+
+    .project-card img {
+        width: 7rem;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .modal-contented {
+        margin: 1rem;
+        width: 98%;
+        max-width: 28rem;
+        padding: 0.8rem;
+    }
+
+
+    /*******************! Contact Section ************************/
+    #contact {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-description {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 322px) {
+
+    /*******************! Home Section ************************/
+    #home {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding-left: 3rem;
+        margin-top: 4rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-text h4 {
+        font-size: 1.2rem !important;
+    }
+
+
+    /*******************! Skills Section ************************/
+
+    .soft-skill {
+        font-size: 0.8rem !important;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+
+    /*******************! Project Section ************************/
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 2rem 0;
+    }
+
+    .project-card {
+        width: 90%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+
+
+
+}
